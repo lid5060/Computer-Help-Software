@@ -1,5 +1,5 @@
 # start of the programme to help debug issues with a dell computer
-print("Welcome to the software!")
+print("Welcome to the computer help software!")
 # code used from https://medium.com/@dghadge2002/building-a-command-line-menu-in-python-exploring-different-applications-f970a61e6412
 # making the menu that the user will see
 while True:
@@ -23,29 +23,37 @@ while True:
                 choice = int(input())
                 if choice == 1:
                     print("Does the computer beep?")
-                    choice = int(input())
                     print("Enter 1 for yes")
                     print("Enter 2 for no")
-                    print("Enter 0 to exit")
+                    print("Enter 0 for exit")
+                    choice = int(input())
                     if choice == 1:
                         print("Enter the amount of beeps you receive")
                         choice = int(input())
                         if choice == 1:
                             print("Bios ROM or CMOS battery failure please replace and retest")
+                            break
                         elif choice == 2:
                             print("RAM is faulty or not detected")
+                            break
                         elif choice == 3:
                             print("The motherboard is faulty please replace")
+                            break
                         elif choice == 4:
                             print("RAM is faulty or not detected")
+                            break
                         elif choice == 5:
                             print("Bios ROM or CMOS battery failure please replace and retest")
+                            break
                         elif choice == 6:
                             print("The graphics card is bad please replace")
+                            break
                         elif choice == 7:
                             print("The processor is bad please replace")
+                            break
                         elif choice == 0:
                             print("The motherboard is faulty please replace")
+                            break
                         else:
                             break
                     elif choice == 2:
@@ -64,7 +72,46 @@ while True:
                             print("Enter 0 to exit")
                             choice = int(input())
                             if choice == 1:
-                                
+                                print("Can you boot from CD/USB?")
+                                print("Enter 1 for yes")
+                                print("Enter 2 for no")
+                                print("Enter 0 to exit")
+                                choice = int(input())
+                                if choice == 1:
+                                    print("Change power lead for drive")
+                                    print("Did this fix the issue?")
+                                    print("Enter 1 for yes")
+                                    print("Enter 2 for no")
+                                    print("Enter 0 to exit")
+                                    choice = int(input())
+                                    if choice == 1:
+                                        print("Success the issue is fixed")
+                                        break
+                                    elif choice == 2:
+                                        print("Does the drive work in another pc?")
+                                        print("Enter 1 for yes")
+                                        print("Enter 2 for no")
+                                        print("Enter 0 to exit")
+                                        if choice == 1:
+                                            print("Replace the PSU")
+                                            break
+                                        elif choice == 2:
+                                            print("The drive is bad please replace")
+                                            break
+                                        elif choice == 0:
+                                            break
+                                        else:
+                                            break
+                                    elif choice == 0:
+                                        break
+                                    else:
+                                        break
+                                elif choice == 2:
+                                    print("The motherboard is faulty please replace")
+                                elif choice == 0:
+                                    break
+                                else:
+                                    break
                             elif choice == 2:
                                 print("The drive is defective please replace it")
                                 break
@@ -74,6 +121,7 @@ while True:
                         break
                 elif choice == 2:
                     print("Replace PSU and retest")
+                    break
                 elif choice == 0:
                     break
             elif choice == 2:
@@ -106,20 +154,28 @@ while True:
                         choice = int(input())
                         if choice == 1:
                             print("Bios ROM or CMOS battery failure please replace and retest")
+                            break
                         elif choice == 2:
                             print("RAM is faulty or not detected")
+                            break
                         elif choice == 3:
                             print("The motherboard is faulty please replace")
+                            break
                         elif choice == 4:
                             print("RAM is faulty or not detected")
+                            break
                         elif choice == 5:
                             print("Bios ROM or CMOS battery failure please replace and retest")
+                            break
                         elif choice == 6:
                             print("The graphics card is bad please replace")
+                            break
                         elif choice == 7:
                             print("The processor is bad please replace")
+                            break
                         elif choice == 0:
                             print("The motherboard is faulty please replace")
+                            break
                         else:
                             break
                     elif choice == 2:
@@ -130,14 +186,67 @@ while True:
                         choice = int(input())
                         if choice == 1:
                             print("Remove the newly added part and retest")
+                            break
                         elif choice == 2:
-                            print()
+                            print("Do you hear the hard drive spin up")
+                            print("Enter 1 for yes")
+                            print("Enter 2 for no")
+                            print("Enter 0 to exit")
+                            choice = int(input())
+                            if choice == 1:
+                                print("Can you boot from CD/USB?")
+                                print("Enter 1 for yes")
+                                print("Enter 2 for no")
+                                print("Enter 0 to exit")
+                                choice = int(input())
+                                if choice == 1:
+                                    print("Change power lead for drive")
+                                    print("Did this fix the issue?")
+                                    print("Enter 1 for yes")
+                                    print("Enter 2 for no")
+                                    print("Enter 0 to exit")
+                                    choice = int(input())
+                                    if choice == 1:
+                                        print("Success the issue is fixed")
+                                        break
+                                    elif choice == 2:
+                                        print("Does the drive work in another pc?")
+                                        print("Enter 1 for yes")
+                                        print("Enter 2 for no")
+                                        print("Enter 0 to exit")
+                                        choice = int(input())
+                                        if choice == 1:
+                                            print("Replace the PSU and retest")
+                                        elif choice == 2:
+                                            print("The drive is bad please replace")
+                                        elif choice == 0:
+                                            break
+                                        else:
+                                            break
+                                    elif choice == 0:
+                                        break
+                                    else:
+                                        break
+                                elif choice == 2:
+                                    print("The motherboard is broken please replace")
+                                    break
+                                elif choice == 0:
+                                    break
+                                else:
+                                    break
+                            elif choice == 2:
+                                print("The drive is bad please replace")
+                            elif choice == 0:
+                                break
+                            else:
+                                break
                         elif choice == 0:
                             break
                     elif choice == 0:
                         break
                 elif choice == 2:
                     print("Replace PSU and retest")
+                    break
                 elif choice == 0:
                     break
             elif choice == 2:
@@ -147,7 +256,7 @@ while True:
                 break
 # end of the sub menu for if the power button is working
         elif choice == 0:
-            print("Exit")
+            print("Exiting")
             break
         else:
             print("Invalid choice!")

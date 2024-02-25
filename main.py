@@ -16,14 +16,25 @@ while True:
 # this is the sub menu for if anything is displayed on the screen
             choice = int(input())
             if choice == 1:
-                print("Working")
-                break
+                print("Does the computer boot everytime?")
+                print("Enter 1 if the computer boots ever time")
+                print("Enter 2 if the computer doesnt boot everytime")
+                print("Enter 0 to exit")
+                choice = int(input())
+                if choice == 1:
+                    print("Does the computer beep?")
+                    break
+                elif choice == 2:
+                    print("Replace PSU and retest")
+                elif choice == 0:
+                    break
             elif choice == 2:
-                print("Not working")
+                print("Troubleshoot the monitor and graphics card")
                 break
             elif choice == 0:
                 break
-# end of the sub menu for if anything is displayed on scren
+# end of the sub menu for if anything is displayed on screen
+# start of the sub menu for if the power button is working
         elif choice == 2:
             print("Is the power button working?")
             print("Enter 1 for yes")
@@ -31,13 +42,24 @@ while True:
             print("Enter 0 to exit")
             choice = int(input())
             if choice == 1:
-                print("Power button works")
-                break
+                print("Does the computer boot everytime?")
+                print("Enter 1 for yes")
+                print("Enter 2 for no")
+                print("Enter 0 to exit")
+                choice = int(input())
+                if choice == 1:
+                    print("Does the computer beep?")
+                    break
+                elif choice == 2:
+                    print("Replace PSU and retest")
+                elif choice == 0:
+                    break
             elif choice == 2:
                 print("The power button isn't working please replace it")
                 break
             elif choice == 0:
                 break
+# end of the sub menu for if the power button is working
         elif choice == 0:
             print("Exit")
             break

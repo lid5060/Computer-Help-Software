@@ -1,6 +1,7 @@
 # start of the programme to help debug issues with a dell computer
 print("Welcome to the computer help software!")
 # code used from https://medium.com/@dghadge2002/building-a-command-line-menu-in-python-exploring-different-applications-f970a61e6412
+# code for error handling used from https://www.w3schools.com/python/python_try_except.asp
 # making the menu that the user will see
 while True:
         print("Does the computer turn on?")
@@ -21,21 +22,37 @@ while True:
             print("Enter 0 to exit")
 # this is the sub menu for if anything is displayed on the screen
             choice = int(input())
+            if choice < 0:
+                raise Exception("Sorry no numbers under 0")
+            if choice> 2:
+                raise Exception("Sorry no numbers over 2")
             if choice == 1:
                 print("Does the computer boot everytime?")
                 print("Enter 1 if the computer boots ever time")
                 print("Enter 2 if the computer doesnt boot everytime")
                 print("Enter 0 to exit")
                 choice = int(input())
+                if choice < 0:
+                    raise Exception("Sorry no numbers under 0")
+                if choice > 2:
+                    raise Exception("Sorry no numbers over 2")
                 if choice == 1:
                     print("Does the computer beep?")
                     print("Enter 1 for yes")
                     print("Enter 2 for no")
                     print("Enter 0 for exit")
                     choice = int(input())
+                    if choice < 0:
+                        raise Exception("Sorry no numbers under 0")
+                    if choice > 2:
+                        raise Exception("Sorry no numbers over 2")
                     if choice == 1:
                         print("Enter the amount of beeps you receive")
                         choice = int(input())
+                        if choice < 0:
+                            raise Exception("Sorry no numbers under 0")
+                        if choice > 7:
+                            raise Exception("Sorry no numbers over 7")
                         if choice == 1:
                             print("Bios ROM or CMOS battery failure please replace and retest")
                             break
@@ -68,6 +85,10 @@ while True:
                         print("Enter 1 for yes")
                         print("Enter 2 for no")
                         print("Enter 0 to exit")
+                        if choice < 0:
+                            raise Exception("Sorry no numbers under 0")
+                        if choice > 2:
+                            raise Exception("Sorry no numbers over 2")
                         if choice == 1:
                             print("Remove the newly added part and retest")
                             break
@@ -77,12 +98,20 @@ while True:
                             print("Enter 2 for no")
                             print("Enter 0 to exit")
                             choice = int(input())
+                            if choice < 0:
+                                raise Exception("Sorry no numbers under 0")
+                            if choice > 2:
+                                raise Exception("Sorry no numbers over 2")
                             if choice == 1:
                                 print("Can you boot from CD/USB?")
                                 print("Enter 1 for yes")
                                 print("Enter 2 for no")
                                 print("Enter 0 to exit")
                                 choice = int(input())
+                                if choice < 0:
+                                    raise Exception("Sorry no numbers under 0")
+                                if choice > 2:
+                                    raise Exception("Sorry no numbers over 2")
                                 if choice == 1:
                                     print("Change power lead for drive")
                                     print("Did this fix the issue?")
@@ -90,6 +119,10 @@ while True:
                                     print("Enter 2 for no")
                                     print("Enter 0 to exit")
                                     choice = int(input())
+                                    if choice < 0:
+                                        raise Exception("Sorry no numbers under 0")
+                                    if choice > 2:
+                                        raise Exception("Sorry no numbers over 2")
                                     if choice == 1:
                                         print("Success the issue is fixed")
                                         break
@@ -144,21 +177,37 @@ while True:
             print("Enter 2 for no")
             print("Enter 0 to exit")
             choice = int(input())
+            if choice < 0:
+                raise Exception("Sorry no numbers under 0")
+            if choice > 2:
+                raise Exception("Sorry no numbers over 2")
             if choice == 1:
                 print("Does the computer boot everytime?")
                 print("Enter 1 for yes")
                 print("Enter 2 for no")
                 print("Enter 0 to exit")
                 choice = int(input())
+                if choice < 0:
+                    raise Exception("Sorry no numbers under 0")
+                if choice > 2:
+                    raise Exception("Sorry no numbers over 2")
                 if choice == 1:
                     print("Does the computer beep?")
                     print("Enter 1 for yes")
                     print("Enter 2 for no")
                     print("Enter 0 to exit")
                     choice = int(input())
+                    if choice < 0:
+                        raise Exception("Sorry no numbers under 0")
+                    if choice > 2:
+                        raise Exception("Sorry no numbers over 2")
                     if choice == 1:
                         print("How many beeps do you receive?")
                         choice = int(input())
+                        if choice < 0:
+                            raise Exception("Sorry no numbers under 0")
+                        if choice > 7:
+                            raise Exception("Sorry no numbers over 7")
                         if choice == 1:
                             print("Bios ROM or CMOS battery failure please replace and retest")
                             break
@@ -191,6 +240,10 @@ while True:
                         print("Enter 2 for no")
                         print("Enter 0 to exit")
                         choice = int(input())
+                        if choice < 0:
+                            raise Exception("Sorry no numbers under 0")
+                        if choice > 2:
+                            raise Exception("Sorry no numbers over 2")
                         if choice == 1:
                             print("Remove the newly added part and retest")
                             break
@@ -200,12 +253,20 @@ while True:
                             print("Enter 2 for no")
                             print("Enter 0 to exit")
                             choice = int(input())
+                            if choice < 0:
+                                raise Exception("Sorry no numbers under 0")
+                            if choice > 2:
+                                raise Exception("Sorry no numbers over 2")
                             if choice == 1:
                                 print("Can you boot from CD/USB?")
                                 print("Enter 1 for yes")
                                 print("Enter 2 for no")
                                 print("Enter 0 to exit")
                                 choice = int(input())
+                                if choice < 0:
+                                    raise Exception("Sorry no numbers under 0")
+                                if choice > 2:
+                                    raise Exception("Sorry no numbers over 2")
                                 if choice == 1:
                                     print("Change power lead for drive")
                                     print("Did this fix the issue?")
@@ -213,6 +274,10 @@ while True:
                                     print("Enter 2 for no")
                                     print("Enter 0 to exit")
                                     choice = int(input())
+                                    if choice < 0:
+                                        raise Exception("Sorry no numbers under 0")
+                                    if choice > 2:
+                                        raise Exception("Sorry no numbers over 2")
                                     if choice == 1:
                                         print("Success the issue is fixed")
                                         break
@@ -222,6 +287,10 @@ while True:
                                         print("Enter 2 for no")
                                         print("Enter 0 to exit")
                                         choice = int(input())
+                                        if choice < 0:
+                                            raise Exception("Sorry no numbers under 0")
+                                        if choice > 2:
+                                            raise Exception("Sorry no numbers over 2")
                                         if choice == 1:
                                             print("Replace the PSU and retest")
                                             break
@@ -267,8 +336,4 @@ while True:
 # end of the sub menu for if the power button is working
         elif choice == 0:
             break
-        else:
-            print("Invalid choice!")
-            break
 # end of the menu
-# upon testing outside of the code editor it was discovered that inputs would be good to use before breaks so that the user can read the information which is displayed

@@ -9,12 +9,10 @@ while True:
         print("Enter 2 for No")
         print("Enter 0 to exit programme")
         choice = int(input())
-        # error handling if the user inputs a number too high or low
         if choice < 0:
-            raise Exception("Sorry no numbers under 0")
+            print("Sorry no numbers under 0")
         if choice > 2:
-            raise Exception("Sorry no numbers over 2")
-        # end of the error handling
+            print("Sorry no numbers over 2")
         if choice == 1:
             print("Is anything displayed on the screen?")
             print("Enter 1 if anything is displayed")
